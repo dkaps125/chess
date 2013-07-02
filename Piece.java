@@ -20,12 +20,11 @@ class Pawn extends Piece {
 	int m;
 	
 	public Pawn(String c, Location s) {
-		super(c);
+		super(c.toLowerCase());
 		if (!c.equalsIgnoreCase("black") || !c.equalsIgnoreCase("white")) {
 			System.err.print("Invalid piece color. Black or white only.");
 			System.exit(1);
 		}
-		this.color = c.toLowerCase();
 		this.l = s;
 		if (color.equals("white"))
 			m = 1;
@@ -83,12 +82,11 @@ class Rook extends Piece {
 	Location l;
 	
 	public Rook(String c, Location s) {
-		super(c);
+		super(c.toLowerCase());
 		if (!c.equalsIgnoreCase("black") || !c.equalsIgnoreCase("white")) {
 			System.err.print("Invalid piece color. Black or white only.");
 			System.exit(1);
 		}
-		this.color = c;
 		this.l = s;
 	}
 
